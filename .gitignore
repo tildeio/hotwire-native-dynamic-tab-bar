@@ -1,0 +1,34 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Ruby / Rails
+log/
+tmp/
+storage/
+db/*.sqlite3
+db/*.sqlite3-*
+.bundle
+vendor/bundle
+
+# Node
+node_modules/
+
+# iOS
+*.xcuserstate
+xcuserdata/
+DerivedData/
+build/
+*.ipa
+*.dSYM.zip
+
+# Android
+.gradle/
+local.properties
+*.apk
+*.aab
+app/build/
+
+# IDE
+.idea/
+*.swp
