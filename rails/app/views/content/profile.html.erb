@@ -1,0 +1,13 @@
+<h1 class="text-2xl font-bold mb-4">Profile</h1>
+
+<div class="space-y-4 text-sm">
+  <div class="flex items-baseline gap-2">
+    <span class="font-semibold text-gray-700">Persona:</span>
+    <span class="text-gray-600"><%= @persona[:name] %></span>
+  </div>
+
+  <div>
+    <span class="font-semibold text-gray-700">Features:</span>
+    <pre class="mt-1.5 p-3 bg-white border border-gray-200 rounded-lg text-xs text-gray-600 overflow-x-auto leading-relaxed"><%= JSON.pretty_generate(features) %></pre>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<h1 class="text-2xl font-bold mb-6">Premium</h1>
+
+<% if features[:premium_tab] %>
+  <p class="text-center text-gray-400 py-12">Premium-only content would appear here.<br>This tab is added when the Premium Tab flag is enabled.</p>
+<% else %>
+  <div class="text-center py-12">
+    <p class="text-lg font-semibold text-gray-700 mb-2">Subscription Required</p>
+    <p class="text-gray-400">This content requires an active premium subscription.</p>
+  </div>
+<% end %>

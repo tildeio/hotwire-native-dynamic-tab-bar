@@ -1,0 +1,10 @@
+<h1 class="text-2xl font-bold mb-4">Explore</h1>
+
+<div class="space-y-2">
+  <% @items.each do |item| %>
+    <%= link_to explore_item_path(item[:id]), class: "flex items-center gap-3 p-3 bg-white border border-gray-200 rounded-xl hover:shadow-sm hover:border-gray-300 transition" do %>
+      <span class="text-xs font-mono text-gray-400 w-5 text-right"><%= item[:id] %></span>
+      <span class="font-medium text-gray-800"><%= item[:title] %></span>
+    <% end %>
+  <% end %>
+</div>

@@ -11,21 +11,61 @@
 
     <%= yield :head %>
 
-    <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
-    <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
-
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
 
-    <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+  <body class="flex flex-col min-h-dvh bg-gray-50">
+    <% if signed_in? %>
+      <header class="bg-white border-b border-gray-200 px-4 py-2.5 flex items-center justify-between">
+        <span class="text-sm font-semibold text-gray-800">
+          <%= SessionsController::PERSONAS.dig(current_user, :name) %>
+        </span>
+        <%= button_to "Sign Out", sign_out_path, method: :delete, class: "text-xs text-red-500 hover:text-red-700" %>
+      </header>
+
+      <div class="bg-white border-b border-gray-200 px-4 py-2.5 flex flex-wrap items-center gap-2 text-xs">
+        <span class="text-gray-400 mr-1">Flags:</span>
+        <% deprecate_state = features[:deprecated_explore] %>
+
+        <%= button_to toggle_feature_path, params: { feature: "premium_tab" }, class: "px-2.5 py-1 rounded-full font-medium transition #{features[:premium_tab] ? 'bg-blue-100 text-blue-700 ring-1 ring-blue-300' : 'bg-gray-100 text-gray-500'}" do %>
+          Premium Tab <%= features[:premium_tab] ? "ON" : "OFF" %>
+        <% end %>
+
+        <%= button_to toggle_feature_path, params: { feature: "deprecated_explore_soft" }, class: "px-2.5 py-1 rounded-full font-medium transition #{deprecate_state == 'soft' ? 'bg-amber-100 text-amber-700 ring-1 ring-amber-300' : 'bg-gray-100 text-gray-500'}" do %>
+          Explore: soft deprecate
+        <% end %>
+
+        <%= button_to toggle_feature_path, params: { feature: "deprecated_explore_hard" }, class: "px-2.5 py-1 rounded-full font-medium transition #{deprecate_state == 'hard' ? 'bg-red-100 text-red-700 ring-1 ring-red-300' : 'bg-gray-100 text-gray-500'}" do %>
+          Explore: hard deprecate
+        <% end %>
+      </div>
+    <% end %>
+
+    <main class="flex-1 max-w-lg mx-auto w-full px-4 py-6 pb-36">
       <%= yield %>
+
+      <details class="mt-10 pt-4 border-t border-gray-200">
+        <summary class="text-xs text-gray-400 cursor-pointer select-none">Tab Config JSON</summary>
+        <pre class="mt-2 p-3 bg-white border border-gray-200 rounded-lg text-xs text-gray-600 overflow-x-auto leading-relaxed"><%= JSON.pretty_generate(tab_config.as_json) %></pre>
+      </details>
     </main>
+
+    <nav
+      data-controller="bridge--navigation"
+      data-bridge--navigation-config-value="<%= tab_config.to_json %>"
+      class="<%= hotwire_native_app? || web_tabs.empty? ? "hidden" : "fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-[0_-1px_3px_rgba(0,0,0,0.05)]" %>"
+    >
+      <div class="flex justify-around py-2.5 max-w-lg mx-auto">
+        <% web_tabs.each do |tab| %>
+          <%= link_to tab[:title], tab[:path],
+            class: "text-xs text-center px-3 py-1 font-medium #{active_tab_id == tab[:id] ? "text-blue-600" : "text-gray-400 hover:text-gray-600"}" %>
+        <% end %>
+      </div>
+    </nav>
   </body>
 </html>
