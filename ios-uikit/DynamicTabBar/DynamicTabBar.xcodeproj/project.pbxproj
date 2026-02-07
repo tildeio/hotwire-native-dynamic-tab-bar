@@ -6,27 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXContainerItemProxy section */
-		56A231EF2F37CCD400D992E1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 56A231D02F37CCD100D992E1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 56A231D72F37CCD100D992E1;
-			remoteInfo = DynamicTabBar;
-		};
-		56A231F92F37CCD400D992E1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 56A231D02F37CCD100D992E1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 56A231D72F37CCD100D992E1;
-			remoteInfo = DynamicTabBar;
-		};
-/* End PBXContainerItemProxy section */
+/* Begin PBXBuildFile section */
+		56A232842F37D2AE00D992E1 /* HotwireNative in Frameworks */ = {isa = PBXBuildFile; productRef = 56UIK0022F37CCE400D992E1 /* HotwireNative */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		56A231D82F37CCD100D992E1 /* DynamicTabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicTabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		56A231EE2F37CCD400D992E1 /* DynamicTabBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicTabBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		56A231F82F37CCD400D992E1 /* DynamicTabBarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicTabBarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -48,16 +33,6 @@
 			path = DynamicTabBar;
 			sourceTree = "<group>";
 		};
-		56A231F12F37CCD400D992E1 /* DynamicTabBarTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = DynamicTabBarTests;
-			sourceTree = "<group>";
-		};
-		56A231FB2F37CCD400D992E1 /* DynamicTabBarUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = DynamicTabBarUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,20 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		56A231EB2F37CCD400D992E1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		56A231F52F37CCD400D992E1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				56A232842F37D2AE00D992E1 /* HotwireNative in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,8 +51,6 @@
 			isa = PBXGroup;
 			children = (
 				56A231DA2F37CCD100D992E1 /* DynamicTabBar */,
-				56A231F12F37CCD400D992E1 /* DynamicTabBarTests */,
-				56A231FB2F37CCD400D992E1 /* DynamicTabBarUITests */,
 				56A231D92F37CCD100D992E1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,8 +59,6 @@
 			isa = PBXGroup;
 			children = (
 				56A231D82F37CCD100D992E1 /* DynamicTabBar.app */,
-				56A231EE2F37CCD400D992E1 /* DynamicTabBarTests.xctest */,
-				56A231F82F37CCD400D992E1 /* DynamicTabBarUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,56 +83,11 @@
 			);
 			name = DynamicTabBar;
 			packageProductDependencies = (
+				56UIK0022F37CCE400D992E1 /* HotwireNative */,
 			);
 			productName = DynamicTabBar;
 			productReference = 56A231D82F37CCD100D992E1 /* DynamicTabBar.app */;
 			productType = "com.apple.product-type.application";
-		};
-		56A231ED2F37CCD400D992E1 /* DynamicTabBarTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 56A232062F37CCD400D992E1 /* Build configuration list for PBXNativeTarget "DynamicTabBarTests" */;
-			buildPhases = (
-				56A231EA2F37CCD400D992E1 /* Sources */,
-				56A231EB2F37CCD400D992E1 /* Frameworks */,
-				56A231EC2F37CCD400D992E1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				56A231F02F37CCD400D992E1 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				56A231F12F37CCD400D992E1 /* DynamicTabBarTests */,
-			);
-			name = DynamicTabBarTests;
-			packageProductDependencies = (
-			);
-			productName = DynamicTabBarTests;
-			productReference = 56A231EE2F37CCD400D992E1 /* DynamicTabBarTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		56A231F72F37CCD400D992E1 /* DynamicTabBarUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 56A232092F37CCD400D992E1 /* Build configuration list for PBXNativeTarget "DynamicTabBarUITests" */;
-			buildPhases = (
-				56A231F42F37CCD400D992E1 /* Sources */,
-				56A231F52F37CCD400D992E1 /* Frameworks */,
-				56A231F62F37CCD400D992E1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				56A231FA2F37CCD400D992E1 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				56A231FB2F37CCD400D992E1 /* DynamicTabBarUITests */,
-			);
-			name = DynamicTabBarUITests;
-			packageProductDependencies = (
-			);
-			productName = DynamicTabBarUITests;
-			productReference = 56A231F82F37CCD400D992E1 /* DynamicTabBarUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -189,14 +102,6 @@
 					56A231D72F37CCD100D992E1 = {
 						CreatedOnToolsVersion = 26.2;
 					};
-					56A231ED2F37CCD400D992E1 = {
-						CreatedOnToolsVersion = 26.2;
-						TestTargetID = 56A231D72F37CCD100D992E1;
-					};
-					56A231F72F37CCD400D992E1 = {
-						CreatedOnToolsVersion = 26.2;
-						TestTargetID = 56A231D72F37CCD100D992E1;
-					};
 				};
 			};
 			buildConfigurationList = 56A231D32F37CCD100D992E1 /* Build configuration list for PBXProject "DynamicTabBar" */;
@@ -208,34 +113,21 @@
 			);
 			mainGroup = 56A231CF2F37CCD100D992E1;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				56UIK0012F37CCE400D992E1 /* XCRemoteSwiftPackageReference "hotwire-native-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 56A231D92F37CCD100D992E1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				56A231D72F37CCD100D992E1 /* DynamicTabBar */,
-				56A231ED2F37CCD400D992E1 /* DynamicTabBarTests */,
-				56A231F72F37CCD400D992E1 /* DynamicTabBarUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		56A231D62F37CCD100D992E1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		56A231EC2F37CCD400D992E1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		56A231F62F37CCD400D992E1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -252,34 +144,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		56A231EA2F37CCD400D992E1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		56A231F42F37CCD400D992E1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		56A231F02F37CCD400D992E1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 56A231D72F37CCD100D992E1 /* DynamicTabBar */;
-			targetProxy = 56A231EF2F37CCD400D992E1 /* PBXContainerItemProxy */;
-		};
-		56A231FA2F37CCD400D992E1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 56A231D72F37CCD100D992E1 /* DynamicTabBar */;
-			targetProxy = 56A231F92F37CCD400D992E1 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		56A232022F37CCD400D992E1 /* Debug */ = {
@@ -294,7 +159,6 @@
 				INFOPLIST_FILE = DynamicTabBar/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -326,7 +190,6 @@
 				INFOPLIST_FILE = DynamicTabBar/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -399,7 +262,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -457,97 +320,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		56A232072F37CCD400D992E1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2Y24Z6WKR6;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.tilde.DynamicTabBarTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DynamicTabBar.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DynamicTabBar";
-			};
-			name = Debug;
-		};
-		56A232082F37CCD400D992E1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2Y24Z6WKR6;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.tilde.DynamicTabBarTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DynamicTabBar.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DynamicTabBar";
-			};
-			name = Release;
-		};
-		56A2320A2F37CCD400D992E1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2Y24Z6WKR6;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.tilde.DynamicTabBarUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = DynamicTabBar;
-			};
-			name = Debug;
-		};
-		56A2320B2F37CCD400D992E1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2Y24Z6WKR6;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.tilde.DynamicTabBarUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = DynamicTabBar;
 			};
 			name = Release;
 		};
@@ -572,25 +351,26 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		56A232062F37CCD400D992E1 /* Build configuration list for PBXNativeTarget "DynamicTabBarTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				56A232072F37CCD400D992E1 /* Debug */,
-				56A232082F37CCD400D992E1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		56A232092F37CCD400D992E1 /* Build configuration list for PBXNativeTarget "DynamicTabBarUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				56A2320A2F37CCD400D992E1 /* Debug */,
-				56A2320B2F37CCD400D992E1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		56UIK0012F37CCE400D992E1 /* XCRemoteSwiftPackageReference "hotwire-native-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hotwired/hotwire-native-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		56UIK0022F37CCE400D992E1 /* HotwireNative */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 56UIK0012F37CCE400D992E1 /* XCRemoteSwiftPackageReference "hotwire-native-ios" */;
+			productName = HotwireNative;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 56A231D02F37CCD100D992E1 /* Project object */;
 }
